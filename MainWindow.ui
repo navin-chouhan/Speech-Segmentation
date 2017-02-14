@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Sound</class>
+ <widget class="QMainWindow" name="Sound">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>522</width>
+    <height>433</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SOUND</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="7" column="4">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;*THRESHOLD=K*U&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0" colspan="5">
+     <widget class="QTextBrowser" name="result"/>
+    </item>
+    <item row="0" column="0" rowspan="2" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>171</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Frame Size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QDoubleSpinBox" name="thershold">
+      <property name="minimum">
+       <double>0.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>10.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.050000000000000</double>
+      </property>
+      <property name="value">
+       <double>0.300000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="QDoubleSpinBox" name="frame_size">
+      <property name="decimals">
+       <number>1</number>
+      </property>
+      <property name="minimum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>30.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>*U</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Threshold</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QDoubleSpinBox" name="shift">
+      <property name="minimum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>15.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>ms</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>ms</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Shift</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" colspan="2">
+     <widget class="QPushButton" name="segment">
+      <property name="text">
+       <string>SEGMENT</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3" colspan="2">
+     <widget class="QPushButton" name="save">
+      <property name="text">
+       <string>SELECT DESTINATION</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>label_7</zorder>
+   <zorder>frame_size</zorder>
+   <zorder>result</zorder>
+   <zorder>segment</zorder>
+   <zorder>shift</zorder>
+   <zorder>label_2</zorder>
+   <zorder>thershold</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>save</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>522</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File </string>
+    </property>
+    <addaction name="open_file"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionQbout"/>
+   </widget>
+   <widget class="QMenu" name="menuMethod">
+    <property name="title">
+     <string>Method</string>
+    </property>
+    <addaction name="energy_method"/>
+    <addaction name="method_1"/>
+    <addaction name="method_2"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMethod"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_file">
+   <property name="text">
+    <string>Open Directory</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionQbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="energy_method">
+   <property name="text">
+    <string>Energy</string>
+   </property>
+  </action>
+  <action name="method_1">
+   <property name="text">
+    <string>M1</string>
+   </property>
+  </action>
+  <action name="method_2">
+   <property name="text">
+    <string>M2</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
